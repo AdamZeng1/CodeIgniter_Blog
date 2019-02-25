@@ -3,5 +3,5 @@
    <h3><?php echo $post['title']?></h3>
         <small class="post-date">Posted on:<?php echo $post['created_at']?></small><br/>
        <?php echo $post['body'] ?>
-       <p><a class="btn btn-primary" href="<?php echo base_url().'posts/'.$post['slug'] ?>">Read more</a></p>
+       <p><a class="btn btn-success" href="<?php echo base_url().'posts/'.$post['slug'] ?>">Read more</a></p>
 <?php endforeach;?>
