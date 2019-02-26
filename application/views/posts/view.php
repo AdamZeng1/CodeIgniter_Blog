@@ -4,3 +4,10 @@
     <?php echo $post['body']; ?>
 
 </div>
+
+<hr/>
+<a class="btn btn-neutral pull-left" href="<?php echo base_url()."posts/edit/".$post['slug']; ?>">Edit</a>
+<?php echo form_open('posts/delete/'.$post['id']); ?>
+       <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+
