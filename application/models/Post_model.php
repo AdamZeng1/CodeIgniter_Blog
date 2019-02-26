@@ -17,7 +17,8 @@ class Post_model extends CI_Model
     public function get_posts($slug = FALSE)
     {
         if ($slug === FALSE) { // query all posts
-            $this->db->order_by('id', 'DESC');
+            $this->db->order_by('posts.id', 'DESC');
+            $this->db->join('categories','categories.id=posts.category_id');
 
             $query = $this->db->get('posts');
             return $query->result_array();
@@ -30,7 +31,7 @@ class Post_model extends CI_Model
         return $query->row_array();
     }
 
-    public function create_posts()
+    public function create_posts($post_image)
     {
         $slug = url_title($this->input->post('title'));
 
@@ -39,6 +40,8 @@ class Post_model extends CI_Model
             'title' => $this->input->post('title'),
             'slug' => $slug,
             'body' => $this->input->post('body'),
+            'post_image'=>$post_image, // add post_image field
+            'category_id' => $this->input->post('category_id'),
         );
 
         return $this->db->insert('posts', $data); // posts为table name
@@ -58,9 +61,19 @@ class Post_model extends CI_Model
         $data = array(
             'title' => $this->input->post('title'),
             'slug' => $slug,
-            'body' => $this->input->post('body')
+            'body' => $this->input->post('body'),
+            'category_id' => $this->input->post('category_id'),
         );
         $this->db->where('id', $id);
-        $this->db->update('posts',$data);
+        $this->db->update('posts', $data);
+    }
+
+    public function get_categories()
+    {
+        $this->db->order_by('name');
+
+        $query = $this->db->get('categories');
+
+        return $query->result_array();
     }
 }
