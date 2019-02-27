@@ -2,7 +2,7 @@
 <head>
     <title>ciBlog</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/CSS/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/CSS/style.css">
     <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 </head>
 <body>
@@ -21,12 +21,18 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>posts">Posts</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url(); ?>categories">categories</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>about">About</a>
             </li>
         </ul>
         <ul class="navbar-nav navbar-right">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url(); ?>categories/create">Create Category</a>
             </li>
         </ul>
 <!--        <form class="form-inline my-2 my-lg-0">-->

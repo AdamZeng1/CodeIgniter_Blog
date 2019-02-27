@@ -5,7 +5,7 @@
 <?php echo form_open_multipart('posts/create'); ?>
     <div class="form-group">
         <label for="Title">Email address</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="Add Title">
+        <input type="text" class="form-control" name="title" placeholder="Add Title">
     </div>
     <div class="form-group">
         <label>Body</label>

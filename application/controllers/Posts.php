@@ -60,11 +60,12 @@ class Posts extends CI_Controller
             $config['max_width'] = '2000';
             $config['max_height'] = '2000';
             $this->load->library('upload', $config);
-
+            $this -> upload -> do_upload('userfile'); //使用do_upload('上传框的name')方法进行上传
+            var_dump($this->upload->do_upload());
 
             if(!$this->upload->do_upload()){
-                $errors = array('error' => $this->upload->display_errors());
-                $post_image = 'noimage.jpg';
+                $error = array('error' => $this->upload->display_errors());
+                $post_image = 'noimage.png';
             } else {
                 $data = array('upload_data' => $this->upload->data());
                 $post_image = $_FILES['userfile']['name'];

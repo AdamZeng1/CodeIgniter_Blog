@@ -4,3 +4,13 @@
     margin: 3px 0;
     display: block;
 }
+
+.post-thumb {
+    width: 100%;
+}
+
+.img-control {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
