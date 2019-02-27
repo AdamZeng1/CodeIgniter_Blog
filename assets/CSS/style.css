@@ -14,3 +14,21 @@
     height: 100px;
     margin-bottom: 50px;
 }
+
+#delete-button {
+    text-align: right;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+.well {
+    background-color: #f4f4f4;
+    border: solid white 1px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}

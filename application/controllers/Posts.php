@@ -26,6 +26,10 @@ class Posts extends CI_Controller
     {
         $data['post'] = $this->post_model->get_posts($slug);
 
+        $post_id = $data['post']['id'];
+
+        $data['comments'] = $this->comment_model->get_comments($post_id);
+
         if (empty($data['post'])) {
             show_404();
         }
@@ -60,10 +64,10 @@ class Posts extends CI_Controller
             $config['max_width'] = '2000';
             $config['max_height'] = '2000';
             $this->load->library('upload', $config);
-            $this -> upload -> do_upload('userfile'); //使用do_upload('上传框的name')方法进行上传
+            $this->upload->do_upload('userfile'); //使用do_upload('上传框的name')方法进行上传
             var_dump($this->upload->do_upload());
 
-            if(!$this->upload->do_upload()){
+            if (!$this->upload->do_upload()) {
                 $error = array('error' => $this->upload->display_errors());
                 $post_image = 'noimage.png';
             } else {
