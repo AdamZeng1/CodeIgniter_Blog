@@ -32,7 +32,7 @@
 
 <hr>
 <h3>Comments</h3>
-<br/>
+
 <?php if ($comments) :?>
 
     <?php foreach ($comments as $comment): ?>
