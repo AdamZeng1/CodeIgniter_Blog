@@ -40,6 +40,7 @@ class Post_model extends CI_Model
             'title' => $this->input->post('title'),
             'slug' => $slug,
             'body' => $this->input->post('body'),
+            'user_id'=>$this->session->userdata('user_id'),
             'post_image'=>$post_image, // add post_image field
             'category_id' => $this->input->post('category_id'),
         );

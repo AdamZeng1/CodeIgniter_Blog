@@ -7,12 +7,16 @@
 
 </div>
 
-<hr/>
-<a class="btn btn-secondary pull-left" href="<?php echo base_url() . "posts/edit/" . $post['slug']; ?>">Edit</a>
+<?php if ($this->session->userdata('user_id') === $post['user_id']): ?>
+    <hr/>
+    <a class="btn btn-secondary pull-left" href="<?php echo base_url() . "posts/edit/" . $post['slug']; ?>">Edit</a>
 
-<?php echo form_open('posts/delete/' . $post['id']); ?>
-<input id="delete-button" type="submit" value="Delete" class="btn btn-danger">
-</form>
+    <?php echo form_open('posts/delete/' . $post['id']); ?>
+    <input id="delete-button" type="submit" value="Delete" class="btn btn-danger">
+    </form>
+
+<?php endif; ?>
+
 <hr>
 <h3>Add Comment</h3>
 <?php echo validation_errors(); ?>
@@ -33,13 +37,15 @@
 <hr>
 <h3>Comments</h3>
 
-<?php if ($comments) :?>
+<?php if ($comments) : ?>
 
     <?php foreach ($comments as $comment): ?>
         <div class="well">
-            <h8><?php echo $comment['body'] ?>[ by <strong><?php echo $comment['name'].' created at '.$comment['created_at']?></strong>]</h8>
+            <h8><?php echo $comment['body'] ?>[ by
+                <strong><?php echo $comment['name'] . ' created at ' . $comment['created_at'] ?></strong>]
+            </h8>
         </div>
-    <?php endforeach;?>
+    <?php endforeach; ?>
 
 <?php else: ?>
     <p><?php echo 'no comment to display!' ?></p>

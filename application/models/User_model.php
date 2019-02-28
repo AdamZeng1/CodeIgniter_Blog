@@ -21,6 +21,21 @@ class User_model extends CI_Model
         return $this->db->insert('users', $data);
     }
 
+    public function login($username, $password)
+    {
+        $this->db->where(array('username' => $username));
+        $this->db->where(array('password' => $password));
+
+        $result = $this->db->get('users');
+
+        if ($result->num_rows() == 1) {
+            return $result->row(0)->id;
+        } else {
+            return false;
+        }
+
+    }
+
 
     public function check_username_exists($username)
     {
@@ -39,7 +54,7 @@ class User_model extends CI_Model
     {
         $query = $this->db->get_where('users', array('email' => $email));
 
-        $data=$query->row_array();
+        $data = $query->row_array();
 
         if (empty($data)) {
             return true;
