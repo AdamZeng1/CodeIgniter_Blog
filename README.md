@@ -20,36 +20,36 @@
 
 #####注册
 
-![register_fail](https://ws1.sinaimg.cn/large/006tKfTcgy1g0m4dithdeg31c00u0b2b.gif)
+![register_fail](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/register_fail.gif)
 
 #####登录
 
-![login](https://ws4.sinaimg.cn/large/006tKfTcgy1g0m4eb863zg31c00u04qt.gif)
+![login](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/login.gif)
 
-![login_success](https://ws1.sinaimg.cn/large/006tKfTcgy1g0m4ji5b2cg31c00u0e87.gif)
+![login_success](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/login_success.gif)
 
 #####发布文章
 
-![create_post](https://ws2.sinaimg.cn/large/006tKfTcgy1g0m4gqmjmeg31c00u0u17.gif)
+![create_post](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/create_post.gif)
 
 #####编辑文章
 
-![alter_post](https://ws4.sinaimg.cn/large/006tKfTcgy1g0m4hhfctpg31c00u0qvd.gif)
+![alter_post](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/alter_post.gif)
 
 
 
 #####删除文章
 
-![delete_post](https://ws4.sinaimg.cn/large/006tKfTcgy1g0m4ieagtug31c00u04qx.gif)
+![delete_post](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/delete_post.gif)
 
 
 
 #####文章分类
 
-![category](https://ws2.sinaimg.cn/large/006tKfTcgy1g0m4ik6bf5g31c00u0u0x.gif)
+![category](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/category.gif)
 
 
 
 #####评论系统
 
-![comment](https://ws2.sinaimg.cn/large/006tKfTcgy1g0m4iw5cheg31c00u01l1.gif)
+![comment](https://github.com/AdamZeng1/CodeIgniter_Blog/blob/master/gif/comment.gif)
