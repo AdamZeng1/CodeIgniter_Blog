@@ -4,7 +4,7 @@
 
 <?php echo form_open_multipart('posts/create'); ?>
     <div class="form-group">
-        <label for="Title">Email address</label>
+        <label for="Title">Title</label>
         <input type="text" class="form-control" name="title" placeholder="Add Title">
     </div>
     <div class="form-group">
