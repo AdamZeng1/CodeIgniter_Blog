@@ -39,3 +39,24 @@
 .container1 {
     margin-top: 300px;
 }
+
+.pagination-links{
+    margin:30px 0;
+}
+
+.pagination-links strong{
+    padding: 8px 13px;
+    margin:5px;
+    background: #f4f4f4;
+    border: 1px #ccc solid;
+}
+
+a.pagination-link{
+    padding: 8px 13px;
+    margin:5px;
+    background: #f4f4f4;
+    border: 1px #ccc solid;
+}
+.cat-delete {
+    display: inline;
+}

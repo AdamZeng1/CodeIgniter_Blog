@@ -55,4 +55,18 @@ class Categories extends CI_Controller
         $this->load->view('templates/footer');
 
     }
+
+    public function delete($id)
+    {
+        // Check login
+        if (!$this->session->userdata('logged_in')) {
+            redirect('/users/login');
+        }
+
+        $this->category_model->delete_category($id);
+
+        $this->session->set_flashdata('category_deleted','category has been deleted');
+
+        redirect(base_url() . 'categories/');
+    }
 }

@@ -27,6 +27,7 @@ class Category_model extends CI_Model
     {
         $data = array(
             'name' => $this->input->post('category_name'),
+            'user_id'=>$this->session->userdata('user_id'),
         );
 
         return $this->db->insert('categories', $data);
@@ -38,10 +39,18 @@ class Category_model extends CI_Model
         return $query->row(); // 返回的是一行数据
     }
 
+    public function delete_category($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('categories');
+        return true;
+    }
+
+
     public function get_posts($id)
     {
 //        $this->db->order_by('id', 'DESC');
-        $this->db->join('categories','categories.id=posts.category_id');
+        $this->db->join('categories', 'categories.id=posts.category_id');
 
         $query = $this->db->get_where('posts', array('category_id' => $id));
         return $query->result_array(); // 返回对象数组

@@ -12,5 +12,9 @@
                 <p><a class="btn btn-success" href="<?php echo base_url().'posts/'.$post['slug'] ?>">Read more</a></p>
             </div>
         </div>
-
 <?php endforeach;?>
+
+<div class="pagination-links">
+    <?php echo $this->pagination->create_links(); ?>
+</div>
+
